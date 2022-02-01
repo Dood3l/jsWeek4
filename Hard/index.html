@@ -28,20 +28,22 @@
     }
   </style>
 </head>
-<body>
-    <button id="red" onclick="chgColor()">
+<body id="body">
+    <button id="red" onclick="chgColor('red')">
       Turn it red!
     </button>
-    <button id="white" onclick="chgColor()">
+    <button id="white" onclick="chgColor('white')">
       Turn it white!
     </button>
     <script>
      // Do Stuff Here
-     function chgColor() {
-         if (id = "red"){
-            document.getElementById("red").classList.toggle("bg-red");
-         } else if (id = "white") {
-            document.getElementById("white").classList.toggle("bg-white");
+     function chgColor(color) {
+         if (color === "red"){
+            document.getElementById("body").classList.remove("bg-white");
+            document.getElementById("body").classList.add("bg-red");
+         } else if (color === "white") {
+            document.getElementById("body").classList.remove("bg-red");
+            document.getElementById("body").classList.add("bg-white");
          }
      }
     </script>
