@@ -12,8 +12,8 @@
 // Start with a const that contains the total amount of money. Then make variables for coins.
 let coins = [1, 2, 5];
 let total = 11
-let sum = 0
 //Create a for loop that gets sum of the array
+let sum = 0
 for (let i = 0; i < coins.length; i++) {
     sum += coins[i];
 }
@@ -22,8 +22,8 @@ function coinCounter(arr){
     if (sum <= total){
         return (total -= sum)
     }
-    else if (total < sum){
-        console.log("-1")
+    else if (sum != total){
+        return "-1"
     }
 }
 console.log(coinCounter(sum));
